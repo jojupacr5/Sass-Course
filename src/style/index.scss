@@ -1,5 +1,17 @@
-$color: lightcyan;
+// Librerias, Settings y Variables
+@import "lib/variables";
+@import "lib/mixins";
 
-body{
-    background-color: $color;
-}
+// Elementos base
+@import "base/buttons";
+@import "lib/fonts";
+@import "base/links";
+
+// Componentes
+@import "components/grid";
+
+// Layout
+@import "layout/layout";
+
+// Este siempre va de ultimo
+@import "components/utilities";
