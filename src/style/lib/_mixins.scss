@@ -2,8 +2,19 @@
     $MIXINS
 /*----------------------------*/
 
-@mixin max-width {
-    max-width: 1024px;
+
+/*Pasando parametros a traves de aun mixin */
+
+@mixin max-width($maxwidth: 1200px) {
+    max-width: $maxwidth;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* Creando un espacio para la directiva @content */
+@mixin respond-to($width) {
+    @media only screen and (min-width: $width){
+        @content 
+    }
 }

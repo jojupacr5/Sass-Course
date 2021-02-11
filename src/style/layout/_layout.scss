@@ -1,5 +1,18 @@
+
+/* Aplicando la directiva content hecha en layout ademas de las declaraciones en mixins*/
 section{
     @include max-width;
+    @include respond-to(800px){
+        background-color: lightcyan;
+    }
     background-color: $color-lightgrey;
     padding: $padding;
+}
+
+.max-width--huge {
+    @include max-width(1200px);
+}
+
+header {
+    background-color: $color-secondary
 }
